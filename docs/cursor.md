@@ -5,7 +5,7 @@ To call the gene variant service from [Cursor](https://github.com/getcursor/curs
 1. Start the service locally:
 
 ```bash
-python variant_service.py
+CIVIC_API_KEY=YOUR_CIVIC_KEY python variant_service.py
 ```
 
 2. Update `cursor.json` with the tool configuration:
@@ -19,6 +19,8 @@ python variant_service.py
 ```
 
 Restart Cursor after saving the file. You can then invoke the service from your MCP workflows.
+Ensure the `CIVIC_API_KEY` environment variable is set (or use `--api-key` when running `variant_annotator.py`) so the service can authenticate to the CIViC API when required.
+
 
 If you have deployed the service to AWS, replace `http://localhost:8000` in the
 example above with the API Gateway URL output during deployment. Provide the

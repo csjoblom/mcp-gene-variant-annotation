@@ -32,6 +32,9 @@ jobs:
         run: npm run build
         working-directory: react_web_app
 
+      - name: Copy docs to build output
+        run: cp -r docs react_web_app/dist
+      
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

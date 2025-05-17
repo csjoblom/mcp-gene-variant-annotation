@@ -1,14 +1,19 @@
 import argparse
 import json
-from urllib.request import urlopen
+import os
+from urllib.request import urlopen, Request
 from urllib.error import HTTPError
 from typing import List, Dict
 
 CIVIC_BASE_URL = "https://civicdb.org/api"  # open API for cancer variants
+CIVIC_API_KEY_ENV = "CIVIC_API_KEY"
 
 
 def fetch_json(url: str):
-    with urlopen(url) as response:
+    """Fetch JSON data from a URL, using an API key if provided."""
+    api_key = os.environ.get(CIVIC_API_KEY_ENV)
+    request = url if not api_key else Request(url, headers={"X-API-KEY": api_key})
+    with urlopen(request) as response:
         return json.loads(response.read().decode())
 
 
@@ -29,7 +34,11 @@ def main():
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--gene", help="Gene symbol to query")
     group.add_argument("--variant", type=int, help="CIViC variant ID to query")
+    parser.add_argument("--api-key", help="CIViC API key", dest="api_key")
     args = parser.parse_args()
+
+    if args.api_key:
+        os.environ[CIVIC_API_KEY_ENV] = args.api_key
 
     try:
         if args.gene:

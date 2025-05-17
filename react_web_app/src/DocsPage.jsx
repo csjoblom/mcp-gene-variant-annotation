@@ -19,10 +19,10 @@ export default function DocsPage({ onBack }) {
         <p>The content of this site is also compiled into a React web app using Shadcn UI under <code>react_web_app</code> and published to the <code>gh-pages</code> branch.</p>
         <h2 className="text-lg font-semibold mt-4">Related Documents</h2>
         <ul className="list-disc ml-6">
-          <li><a href="../docs/prd.txt">Product Requirements</a></li>
-          <li><a href="../docs/prd_tasks.md">Task Breakdown</a></li>
-          <li><a href="../docs/mcp.md">Model Context Protocol Integration</a></li>
-          <li><a href="../docs/cursor.md">Configuring in Cursor</a></li>
+          <li><a href="docs/prd.txt">Product Requirements</a></li>
+          <li><a href="docs/prd_tasks.md">Task Breakdown</a></li>
+          <li><a href="docs/mcp.md">Model Context Protocol Integration</a></li>
+          <li><a href="docs/cursor.md">Configuring in Cursor</a></li>
         </ul>
       </Card>
     </main>

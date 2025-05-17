@@ -24,7 +24,6 @@ Features:
 Dependencies:
 - fastapi
 - uvicorn
-- pytest
 
 Future Enhancements:
 - Authentication/authorization for access control

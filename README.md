@@ -29,5 +29,13 @@ it in Cursor.
 The `variant_service.py` microservice can be used in a Model Context Protocol
 workflow. AI models running on an MCP server can call the service's endpoints to
 retrieve gene variant information. See [docs/mcp.md](docs/mcp.md) for details on
-the available tools. Configuration instructions for [Cursor](https://github.com/getcursor/cursor) are provided in [docs/cursor.md](docs/cursor.md).
+ the available tools. Configuration instructions for [Cursor](https://github.com/getcursor/cursor) are provided in [docs/cursor.md](docs/cursor.md).
+
+## Running Tests
+
+Run the test suite using Python's built-in `unittest` module:
+
+```bash
+python -m unittest
+```
 

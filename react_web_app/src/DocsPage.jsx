@@ -3,7 +3,8 @@ import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import './index.css';
 
-export default function DocsPage({ onBack }) {
+export default function DocsPage({ onBack, onOpen }) {
+
   return (
     <main className="p-4 font-sans main-container">
       <Button onClick={onBack}>Back</Button>
@@ -18,11 +19,11 @@ export default function DocsPage({ onBack }) {
         <h2 className="text-lg font-semibold mt-4">Web Documentation</h2>
         <p>The content of this site is also compiled into a React web app using Shadcn UI under <code>react_web_app</code> and published to the <code>gh-pages</code> branch.</p>
         <h2 className="text-lg font-semibold mt-4">Related Documents</h2>
-        <ul className="list-disc ml-6">
-          <li><a href="docs/prd.txt">Product Requirements</a></li>
-          <li><a href="docs/prd_tasks.md">Task Breakdown</a></li>
-          <li><a href="docs/mcp.md">Model Context Protocol Integration</a></li>
-          <li><a href="docs/cursor.md">Configuring in Cursor</a></li>
+        <ul className="list-disc ml-6 space-y-1">
+          <li><Button onClick={() => onOpen('prd')}>Product Requirements</Button></li>
+          <li><Button onClick={() => onOpen('tasks')}>Task Breakdown</Button></li>
+          <li><Button onClick={() => onOpen('mcp')}>Model Context Protocol Integration</Button></li>
+          <li><Button onClick={() => onOpen('cursor')}>Configuring in Cursor</Button></li>
         </ul>
       </Card>
     </main>

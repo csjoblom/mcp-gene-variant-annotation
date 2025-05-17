@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
 import DocsPage from './DocsPage';
+import DocPage from './DocPage';
+import { prd, prdTasks, mcp, cursorConfig } from './docs';
 import './index.css';
 
 const docText = `Gene Variant Annotation Service
@@ -29,10 +31,22 @@ Available endpoints:
 Restart Cursor after saving the configuration.`;
 
 export default function App() {
-  const [showDocs, setShowDocs] = React.useState(false);
+  const [page, setPage] = React.useState('home');
 
-  if (showDocs) {
-    return <DocsPage onBack={() => setShowDocs(false)} />;
+  if (page === 'docs') {
+    return <DocsPage onBack={() => setPage('home')} onOpen={setPage} />;
+  }
+  if (page === 'prd') {
+    return <DocPage title="Product Requirements" content={prd} onBack={() => setPage('docs')} />;
+  }
+  if (page === 'tasks') {
+    return <DocPage title="Task Breakdown" content={prdTasks} onBack={() => setPage('docs')} />;
+  }
+  if (page === 'mcp') {
+    return <DocPage title="MCP Integration" content={mcp} onBack={() => setPage('docs')} />;
+  }
+  if (page === 'cursor') {
+    return <DocPage title="Configuring in Cursor" content={cursorConfig} onBack={() => setPage('docs')} />;
   }
 
   return (
@@ -40,7 +54,7 @@ export default function App() {
       <h1 className="text-2xl font-bold mb-4">Gene Variant Service Docs</h1>
       <pre className="whitespace-pre-wrap">{docText}</pre>
       <div className="mt-4">
-        <Button onClick={() => setShowDocs(true)}>View Documentation</Button>
+        <Button onClick={() => setPage('docs')}>View Documentation</Button>
       </div>
     </main>
   );

@@ -7,7 +7,10 @@ app = cdk.App()
 
 civic_api_key = os.environ.get("CIVIC_API_KEY", "")
 
-VariantServiceStack(app, "VariantServiceStack", civic_api_key=civic_api_key)
+deploy_env = os.environ.get("DEPLOY_ENV", "dev")
+stack_name = f"VariantServiceStack-{deploy_env}"
+
+VariantServiceStack(app, stack_name, civic_api_key=civic_api_key)
 
 app.synth()
 

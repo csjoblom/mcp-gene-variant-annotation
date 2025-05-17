@@ -3,9 +3,13 @@ name: Deploy to AWS
 on:
   workflow_dispatch:
     inputs:
-      civic_api_key:
-        description: 'CIVIC API key passed to the service'
+      environment:
+        description: 'Target environment to deploy (dev or prod)'
         required: true
+        type: choice
+        options:
+          - dev
+          - prod
 
 jobs:
   deploy:
@@ -25,7 +29,8 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
-          CIVIC_API_KEY: ${{ github.event.inputs.civic_api_key }}
+          CIVIC_API_KEY: ${{ secrets.CIVIC_API_KEY }}
+          DEPLOY_ENV: ${{ github.event.inputs.environment }}
         run: |
           cdk -a "python infra/app.py" deploy --require-approval never
 

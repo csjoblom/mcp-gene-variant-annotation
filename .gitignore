@@ -1,3 +1,5 @@
 # Ignore node modules and build artifacts
 react_web_app/node_modules/
 react_web_app/dist/
+__pycache__/
+**/__pycache__/

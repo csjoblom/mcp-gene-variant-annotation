@@ -8,7 +8,7 @@ This file provides guidelines for AI code assistants working on the repository.
 
 ## React Web App
 - Use Node.js 20.
-- If you modify files under `react_web_app/`, run `npm ci` followed by `npm run build` in that directory.
+- The Codex environment has no access to the npm registry. If you modify files in `react_web_app/`, do not run `npm ci`, `npm run build`, or any React tests. The CI pipeline handles building the app and managing lock files.
 
 ## Deployment
 - Infrastructure code for AWS is located in `infra/`. Dependencies are in `infra/requirements.txt`.

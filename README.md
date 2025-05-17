@@ -39,3 +39,8 @@ Run the test suite using Python's built-in `unittest` module:
 python -m unittest
 ```
 
+
+## AWS Deployment
+
+A CDK stack in `infra/` can deploy the service to AWS Fargate behind API Gateway. See [docs/aws_deploy.md](docs/aws_deploy.md) for setup instructions and a GitHub Actions workflow that performs the deployment.
+

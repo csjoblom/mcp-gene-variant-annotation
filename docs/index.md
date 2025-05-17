@@ -14,3 +14,9 @@ python variant_annotator.py --gene TP53
 
 The tool queries the CIViC API each time it runs so information is always up to date with the latest curated variants and studies.
 
+## Related Documents
+
+- [Product Requirements](prd.txt)
+- [Task Breakdown](prd_tasks.md)
+- [Model Context Protocol Integration](mcp.md)
+

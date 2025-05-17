@@ -5,7 +5,7 @@ import './index.css';
 
 export default function DocsPage({ onBack }) {
   return (
-    <main className="p-4 font-sans">
+    <main className="p-4 font-sans main-container">
       <Button onClick={onBack}>Back</Button>
       <Card>
         <h1 className="text-xl font-bold mb-2">Gene Variant Annotation Service</h1>

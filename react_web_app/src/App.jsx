@@ -36,7 +36,7 @@ export default function App() {
   }
 
   return (
-    <main className="p-4 font-sans">
+    <main className="p-4 font-sans main-container">
       <h1 className="text-2xl font-bold mb-4">Gene Variant Service Docs</h1>
       <pre className="whitespace-pre-wrap">{docText}</pre>
       <div className="mt-4">

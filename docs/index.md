@@ -17,7 +17,7 @@ The tool queries the CIViC API each time it runs so information is always up to 
 
 ## Web Documentation
 
-The content of this site is also compiled into a simple Flutter web app under `flutter_web_app` and published to the `gh-pages` branch.
+The content of this site is also compiled into a React web app using Shadcn UI under `react_web_app` and published to the `gh-pages` branch.
 
 ## Related Documents
 

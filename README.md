@@ -44,3 +44,8 @@ python -m unittest
 
 A CDK stack in `infra/` can deploy the service to AWS Fargate behind API Gateway. See [docs/aws_deploy.md](docs/aws_deploy.md) for setup instructions and a GitHub Actions workflow that performs the deployment.
 
+After deployment, note the API Gateway URL and API key printed in the workflow
+logs. Configure Cursor or any other MCP client&mdash;such as Claude Desktop&mdash;
+to use this URL as the tool's `base_url` and supply the API key through its
+authentication settings.
+

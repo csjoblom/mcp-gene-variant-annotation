@@ -23,7 +23,7 @@ The action builds a Docker image from this repository and provisions:
 2. An Application Load Balancer fronting the service
 3. An API Gateway that requires an API key for access
 
-The generated API key and endpoint URL are printed in the workflow logs as CloudFormation outputs. Use this key when configuring tools in Cursor.
+The generated API key and endpoint URL are printed in the workflow logs as CloudFormation outputs. Use this key when configuring tools in Cursor or any other MCP client, such as Claude Desktop.
 
 The CIVIC API key you supply is passed to the container as the `CIVIC_API_KEY` environment variable.
 

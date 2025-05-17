@@ -19,6 +19,13 @@ The tool queries the CIViC API each time it runs so information is always up to 
 
 The content of this site is also compiled into a React web app using Shadcn UI under `react_web_app` and published to the `gh-pages` branch.
 
+## Hosting on AWS
+
+You can deploy the service to AWS Fargate using the CDK stack in `infra/`. The
+deployment exposes the API through API Gateway. Configure clients such as Cursor
+or Claude Desktop with the provided URL and API key to access the hosted
+service.
+
 ## Related Documents
 
 - [Product Requirements](prd.txt)

@@ -14,6 +14,10 @@ python variant_annotator.py --gene TP53
 
 The tool queries the CIViC API each time it runs so information is always up to date with the latest curated variants and studies.
 
+## Web Demo
+
+A small Flutter web demo is built from the `flutter_web_app` directory and published to GitHub Pages via the `gh-pages` branch when changes are pushed to `main`.
+
 ## Related Documents
 
 - [Product Requirements](prd.txt)

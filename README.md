@@ -14,7 +14,10 @@ The tool prints variant IDs, names and short descriptions retrieved from CIViC.
 
 ## GitHub Pages
 
-The `docs/` directory contains a basic site that can be published with GitHub Pages to share information and instructions.
+This repository contains a simple Flutter web application in `flutter_web_app`.
+The included GitHub Actions workflow builds the app and publishes the generated
+site to the `gh-pages` branch, enabling GitHub Pages hosting. The `docs/`
+directory remains available for additional documentation.
 
 ## Requirements
 

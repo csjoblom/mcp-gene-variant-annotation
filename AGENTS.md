@@ -3,7 +3,7 @@
 This file provides guidelines for AI code assistants working on the repository.
 
 ## Testing
-- Install Python requirements with `pip install -r requirements.txt`.
+- The environment has no `pip` or external network access. Use the system Python packages and **do not** run `pip install`.
 - Run the test suite using `python -m unittest` from the repository root.
 
 ## React Web App

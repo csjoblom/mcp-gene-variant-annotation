@@ -1,0 +1,34 @@
+Product Requirements Document - Gene Variant Annotation MCP Service
+-------------------------------------------------------------------
+
+Overview:
+This service exposes the existing variant annotation functionality as a HTTP
+microservice. It communicates with the open CIViC API to retrieve oncology
+variant data.
+
+Features:
+1. **Gene Variant Query**
+   - Endpoint: `GET /gene/{gene}`
+   - Returns a list of variants for the provided gene symbol.
+2. **Variant Details**
+   - Endpoint: `GET /variant/{variant_id}`
+   - Returns details for a specific CIViC variant ID.
+3. **Health Check**
+   - Endpoint: `GET /health`
+   - Returns `{ "status": "ok" }` when the service is running.
+4. **Error Handling**
+   - API returns HTTP 404 when the CIViC API reports missing data.
+5. **Service Execution**
+   - Starts with `python variant_service.py` which runs `uvicorn` on port 8000.
+
+Dependencies:
+- fastapi
+- uvicorn
+
+Future Enhancements:
+- Authentication/authorization for access control
+- Rate limiting to protect the CIViC API
+
+The service reuses logic from `variant_annotator.py` and does not store any
+state. It serves as an integration point for other MCP components that need
+programmatic access to cancer variant information.

@@ -3,3 +3,18 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.text-xl { font-size: 1.25rem; }
+.text-lg { font-size: 1.125rem; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mt-4 { margin-top: 1rem; }
+.list-disc { list-style-type: disc; }
+.ml-6 { margin-left: 1.5rem; }
+.p-2 { padding: 0.5rem; }
+.bg-gray-100 { background-color: #f3f4f6; }
+.rounded { border-radius: 0.25rem; }
+.font-sans { font-family: sans-serif; }
+.p-4 { padding: 1rem; }

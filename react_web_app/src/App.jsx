@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
+import DocsPage from './DocsPage';
 import './index.css';
 
 const docText = `Gene Variant Annotation Service
@@ -28,12 +29,18 @@ Available endpoints:
 Restart Cursor after saving the configuration.`;
 
 export default function App() {
+  const [showDocs, setShowDocs] = React.useState(false);
+
+  if (showDocs) {
+    return <DocsPage onBack={() => setShowDocs(false)} />;
+  }
+
   return (
     <main className="p-4 font-sans">
       <h1 className="text-2xl font-bold mb-4">Gene Variant Service Docs</h1>
       <pre className="whitespace-pre-wrap">{docText}</pre>
       <div className="mt-4">
-        <Button>Shadcn Button</Button>
+        <Button onClick={() => setShowDocs(true)}>View Documentation</Button>
       </div>
     </main>
   );

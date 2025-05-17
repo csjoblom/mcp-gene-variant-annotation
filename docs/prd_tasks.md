@@ -31,7 +31,7 @@ This document lists implementation tasks derived from the PRD (`prd.txt`) and ex
 - Document how to run the service locally.
 
 ## 6. Dependencies
-- Confirm `fastapi`, `uvicorn`, and `pytest` are listed in `requirements.txt`.
+- Confirm `fastapi` and `uvicorn` are listed in `requirements.txt`.
 - Provide installation instructions in the README.
 
 ## 7. Future Enhancements

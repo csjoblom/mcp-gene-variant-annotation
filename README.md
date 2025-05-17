@@ -14,7 +14,7 @@ The tool prints variant IDs, names and short descriptions retrieved from CIViC.
 
 ## GitHub Pages
 
-This repository contains a simple Flutter web application in `flutter_web_app`.
+This repository contains a React web application using Shadcn UI in `react_web_app`.
 The GitHub Actions workflow builds the app from the Markdown files in `docs/` and
 publishes the generated site to the `gh-pages` branch. The result is a hosted
 site with documentation about the MCP service and instructions for configuring

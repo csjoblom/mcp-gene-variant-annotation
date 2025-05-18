@@ -8,6 +8,10 @@ To call the gene variant service from [Cursor](https://github.com/getcursor/curs
 CIVIC_API_KEY=YOUR_CIVIC_KEY python variant_service.py
 ```
 
+   The same command works in an SSE (Secure Shell Environment) session if you
+   prefer not to run the service on your local machine. Cursor only needs the
+   service's URL (usually `http://localhost:8000`).
+
 2. Update `cursor.json` with the tool configuration:
 
 ```json

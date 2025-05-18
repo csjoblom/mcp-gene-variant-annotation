@@ -26,6 +26,19 @@ deployment exposes the API through API Gateway. Configure clients such as Cursor
 or Claude Desktop with the provided URL and API key to access the hosted
 service.
 
+## Running in SSE
+
+The service can also run inside an SSE (Secure Shell Environment) session. Start
+it with your CIViC API key just as you would locally:
+
+```bash
+CIVIC_API_KEY=YOUR_CIVIC_KEY python variant_service.py
+```
+
+Point Cursor or any other MCP client at the SSE server's URL (usually
+`http://localhost:8000`) to use the service without hosting it on your local
+machine.
+
 ## Related Documents
 
 - [Product Requirements](prd.txt)

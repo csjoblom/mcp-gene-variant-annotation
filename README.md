@@ -40,6 +40,13 @@ To run the service locally, export your CIViC API key and start the FastAPI serv
 CIVIC_API_KEY=YOUR_CIVIC_KEY python variant_service.py
 ```
 
+### Running in SSE
+
+If you have access to an SSE (Secure Shell Environment) session, you can start
+the service there using the same command. Cursor or other MCP clients can then
+connect to the service at the SSE URL (typically `http://localhost:8000`) just
+as if it were running on your local machine.
+
 ## Running Tests
 
 Run the test suite using Python's built-in `unittest` module:

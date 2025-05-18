@@ -20,6 +20,10 @@ Available endpoints:
    \`\`\`bash
    python variant_service.py
    \`\`\`
+
+   You can also run this command inside an SSE (Secure Shell Environment)
+   session and point Cursor at the SSE URL (typically
+   \\`http://localhost:8000\\`).
 2. Add an entry to your \`cursor.json\` configuration:
    \`\`\`json
    {

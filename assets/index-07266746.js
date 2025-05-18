@@ -150,6 +150,10 @@ To call the gene variant service from [Cursor](https://github.com/getcursor/curs
 python variant_service.py
 \`\`\`
 
+   The same command can be run inside an SSE (Secure Shell Environment) session
+   if you prefer not to host the service on your machine. Cursor only needs the
+   URL of the running server, typically \`http://localhost:8000\`.
+
 2. Update \`cursor.json\` with the tool configuration:
 \`\`\`json
 {
@@ -176,6 +180,10 @@ Available endpoints:
    \`\`\`bash
    python variant_service.py
    \`\`\`
+
+   You can also run this command inside an SSE (Secure Shell Environment)
+    session and point Cursor at the SSE URL (typically
+    \`http://localhost:8000\`).
 2. Add an entry to your \`cursor.json\` configuration:
    \`\`\`json
    {
